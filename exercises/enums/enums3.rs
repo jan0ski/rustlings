@@ -5,7 +5,7 @@ enum Message {
     Move(Point),
     Echo(String),
     ChangeColor((u8, u8, u8)),
-    Quit
+    Quit,
 }
 
 struct Point {
@@ -41,7 +41,7 @@ impl State {
             Message::Move(point) => self.move_position(point),
             Message::Echo(s) => self.echo(s),
             Message::ChangeColor(color) => self.change_color(color),
-            Message::Quit => self.quit()
+            Message::Quit => self.quit(),
         }
     }
 }
